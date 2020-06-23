@@ -8,7 +8,7 @@ type Props = {
 };
 
 const Display: FunctionComponent<Props> = ({ buffer }) => (
-  <div>
+  <div className="flex-1 bg-gray-300 font-mono p-4">
     {buffer.numbers.slice(0).reverse().map((value, index) => <DisplayRow value={value} index={buffer.numbers.length - index} key={index} />)}
     <Input value={buffer.input} />
   </div>

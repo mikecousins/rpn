@@ -5,7 +5,7 @@ type Props = {
 };
 
 const Input: FunctionComponent<Props> = ({ value }) => (
-  <div>{value}</div>
+  <div className="text-right">{value}</div>
 );
 
 export default Input;

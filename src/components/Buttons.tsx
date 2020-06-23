@@ -8,7 +8,7 @@ type Props = {
 };
 
 const Buttons: FunctionComponent<Props> = ({ buffer, setBuffer }) => (
-  <div>
+  <div className="flex-1 mt-2">
     <Button onClick={() => {
       const newBuffer: RpnBuffer = { ...buffer };
       newBuffer.input = newBuffer.input * 10 + 1;
