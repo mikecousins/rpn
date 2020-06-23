@@ -5,11 +5,11 @@ import Display from './components/Display';
 
 export type RpnBuffer = {
   numbers: number[];
-  input: number;
+  input: string;
 }
 
 function App() {
-  const [buffer, setBuffer] = useState<RpnBuffer>({ numbers: [], input: 0 });
+  const [buffer, setBuffer] = useState<RpnBuffer>({ numbers: [], input: '' });
 
   return (
     <Calculator>

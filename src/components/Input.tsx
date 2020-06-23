@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
 
 type Props = {
-  value?: number;
+  value: string;
 };
 
 const Input: FunctionComponent<Props> = ({ value }) => (

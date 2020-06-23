@@ -11,8 +11,8 @@ const Buttons: FunctionComponent<Props> = ({ buffer, setBuffer }) => (
   <div className="flex-1 mt-2 grid grid-cols-4 gap-4">
     <Button onClick={() => {
       const newBuffer: RpnBuffer = { ...buffer };
-      newBuffer.numbers.unshift(newBuffer.input);
-      newBuffer.input = 0;
+      newBuffer.numbers.unshift(Number.parseFloat(newBuffer.input));
+      newBuffer.input = '';
       setBuffer(newBuffer);
     }}>
       Enter
@@ -43,7 +43,7 @@ const Buttons: FunctionComponent<Props> = ({ buffer, setBuffer }) => (
       const newBuffer: RpnBuffer = { ...buffer };
       if (newBuffer.numbers.length > 1) {
         newBuffer.numbers = [];
-        newBuffer.input = 0;
+        newBuffer.input = '';
         setBuffer(newBuffer);
       }
     }}>
@@ -51,21 +51,21 @@ const Buttons: FunctionComponent<Props> = ({ buffer, setBuffer }) => (
     </Button>
     <Button onClick={() => {
       const newBuffer: RpnBuffer = { ...buffer };
-      newBuffer.input = newBuffer.input * 10 + 7;
+      newBuffer.input = newBuffer.input + '7';
       setBuffer(newBuffer);
     }}>
       7
     </Button>
     <Button onClick={() => {
       const newBuffer: RpnBuffer = { ...buffer };
-      newBuffer.input = newBuffer.input * 10 + 8;
+      newBuffer.input += '8';
       setBuffer(newBuffer);
     }}>
       8
     </Button>
     <Button onClick={() => {
       const newBuffer: RpnBuffer = { ...buffer };
-      newBuffer.input = newBuffer.input * 10 + 9;
+      newBuffer.input += '9';
       setBuffer(newBuffer);
     }}>
       9
@@ -83,21 +83,21 @@ const Buttons: FunctionComponent<Props> = ({ buffer, setBuffer }) => (
     </Button>
     <Button onClick={() => {
       const newBuffer: RpnBuffer = { ...buffer };
-      newBuffer.input = newBuffer.input * 10 + 4;
+      newBuffer.input += '4';
       setBuffer(newBuffer);
     }}>
       4
     </Button>
     <Button onClick={() => {
       const newBuffer: RpnBuffer = { ...buffer };
-      newBuffer.input = newBuffer.input * 10 + 5;
+      newBuffer.input += '5';
       setBuffer(newBuffer);
     }}>
       5
     </Button>
     <Button onClick={() => {
       const newBuffer: RpnBuffer = { ...buffer };
-      newBuffer.input = newBuffer.input * 10 + 6;
+      newBuffer.input += '6';
       setBuffer(newBuffer);
     }}>
       6
@@ -115,21 +115,21 @@ const Buttons: FunctionComponent<Props> = ({ buffer, setBuffer }) => (
     </Button>
     <Button onClick={() => {
       const newBuffer: RpnBuffer = { ...buffer };
-      newBuffer.input = newBuffer.input * 10 + 1;
+      newBuffer.input += '1';
       setBuffer(newBuffer);
     }}>
       1
     </Button>
     <Button onClick={() => {
       const newBuffer: RpnBuffer = { ...buffer };
-      newBuffer.input = newBuffer.input * 10 + 2;
+      newBuffer.input += '2';
       setBuffer(newBuffer);
     }}>
       2
     </Button>
     <Button onClick={() => {
       const newBuffer: RpnBuffer = { ...buffer };
-      newBuffer.input = newBuffer.input * 10 + 3;
+      newBuffer.input += '3';
       setBuffer(newBuffer);
     }}>
       3
@@ -147,14 +147,14 @@ const Buttons: FunctionComponent<Props> = ({ buffer, setBuffer }) => (
     </Button>
     <Button onClick={() => {
       const newBuffer: RpnBuffer = { ...buffer };
-      newBuffer.input = newBuffer.input * 10 + 0;
+      newBuffer.input += '0';
       setBuffer(newBuffer);
     }}>
       0
     </Button>
     <Button onClick={() => {
       const newBuffer: RpnBuffer = { ...buffer };
-      newBuffer.input = newBuffer.input * 10 + 1;
+      newBuffer.input += '.';
       setBuffer(newBuffer);
     }}>
       .
