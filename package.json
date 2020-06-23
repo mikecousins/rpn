@@ -19,6 +19,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "prestart": "tailwind build node_modules/tailwindcss/tailwind.css -o src/tailwind.css",
+    "prebuild": "postcss node_modules/tailwindcss/tailwind.css -o src/tailwind.css",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
