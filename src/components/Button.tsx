@@ -6,7 +6,7 @@ type Props = {
 
 const Button: FunctionComponent<Props> = ({ children, onClick }) => (
   <button
-    className="p-4 border bg-gray-700 border-gray-800"
+    className="p-4 border bg-gray-800 border-gray-700 text-gray-300"
     onClick={onClick}
   >
     {children}
